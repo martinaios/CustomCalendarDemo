@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSCalendar.h"
+#import <UserNotifications/UserNotifications.h>
+@interface ViewController :UIViewController<FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance>
 
-@interface ViewController : UIViewController
+//@property (weak, nonatomic) IBOutlet FSCalendar *view;
+{
+    FSCalendar * calendar;
+    NSArray * datesWithEvent;
+    NSCalendar * gregorian;
+    NSDateFormatter* nsformatter;
+    UNUserNotificationCenter *center;
+
+}
+
 
 
 @end
